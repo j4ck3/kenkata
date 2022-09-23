@@ -34,6 +34,19 @@ body {
     scroll-behavior: smooth;
 }
 
+.btn{
+    font-family: var(--font-roboto);
+    text-transform: uppercase;
+    text-decoration: none;
+    width: 130px;
+    font-size: 18px;
+    color: var(--color-theme);
+    background-color: white;
+    border-radius: 50px;
+    margin-top: 2.5em;
+    padding: 10px 10px;
+}
+
 .top {
     display: flex;
     background-color: var(--color-theme);
@@ -212,21 +225,6 @@ body {
         color:var(--color-theme-dark)
     }
 
-    .text-container a {
-        font-family: var(--font-roboto);
-        text-transform: uppercase;
-        text-decoration: none;
-        width: 130px;
-        font-size: 18px;
-        color: var(--color-theme);
-        background-color: white;
-        border-radius: 50px;
-        margin-top: 2.5em;
-        padding: 10px 10px;
-        text-align: center;
-        align-items: center;
-    }
-
     .container img{
         display: flex;
         justify-content: flex-end;
@@ -386,20 +384,184 @@ body {
     }
 
     .arrivals-title{
+        z-index: 2;
         display: flex;
         align-items: center;
-        position: absolute;
-        left: 0px;
-        bottom: 0px;
+        margin-left: 25px;
         font-family: var(--font-roboto);
         border-radius: 0 4px 0 0;
         font-size: var(--font-size-18);
-        color: var(--color-theme);
-        background-color: var(--color-theme-dark);
-        padding: 0.5rem 1rem;
-        width: 100%;
-        height: 50px;
+        color: white;
     }
+
+    .arrivals-info{
+        position: absolute;
+        font-family: var(--font-roboto);
+        color: white;
+        top: 100%;
+        margin: 10px 20px;
+        bottom: 0px;
+        transition: top .2s ease-in-out;
+    }
+        .arrivals-info h3, h4, p{
+            margin: 4px;
+        }
+
+        .arrivals-info .arrivlas-price-1{
+            font-size: var(--font-size-16);
+            color: white;
+            text-decoration: line-through;
+        }
+        
+        .arrivals-info .arrivlas-price-2{
+            font-size: var(--font-size-24);
+            color: var(--color-theme)
+        }
+        .arrivals-info h3{
+            font-size: 22px;
+            font-weight: 400;
+        }
+        .arrivals-info h4{
+            font-size: 16px;
+            border: 1px solid white;
+            padding: 1px 2px;
+            width: 58px;
+            font-weight: 400;
+        }
+
+    .arrivals-grid-item:hover .arrivals-background{
+        opacity: 85%;
+        width: 100%;
+        height: 100%;
+        background-color: var(--color-theme-dark);
+        transition: all 0.2s ease-in-out;
+    }
+    .arrivals-grid-item:hover .arrivals-title{
+        display: none;
+    }
+    .arrivals-grid-item:hover .arrivals-menu{
+        top: 10px;
+    }
+    .arrivals-grid-item:hover .arrivals-info{
+        top: 60%;
+    }
+    .arrivals-grid-item:hover .arrivals-rank{
+        top: 84%;
+    }
+
+    .arrivals-background{
+        display: flex;
+        position: absolute;
+        opacity: 100%;
+        left: 0px;
+        bottom: 0px;
+        width: 100%;
+        height: 51px;
+        background-color: var(--color-theme-dark);
+    }
+
+    .arrivals-menu{
+        list-style: none;
+        z-index: 2;
+        position: absolute;
+        right: 20px;
+        top: 100%;
+        background-color: white;
+        border: 1px solid var(--color-gray-3);
+        border-radius: 50px;
+        padding: 0.7rem;
+        color: var(--color-gray-0);
+        transition: top .2s ease-in-out;
+    }
+
+    .arrivals-rank{
+        display: flex;
+        list-style: none;
+        z-index: 2;
+        position: absolute;
+        right: 10px;
+        top: 100%;
+        margin-left: 10px;
+        color: var(--color-theme);
+        transition: top .2s ease-in-out;
+    }
+
+    .arrivals-rank li{
+        margin-left: 1px;
+    }
+
+    /* -------- tooltip credit: w3schools --------- */
+
+    .arrivals-grid-item .img-big{
+        height: 110%;
+        width: auto;
+    }
+
+    .arrivals-menu .tooltiptext {
+        position: absolute;
+        visibility: hidden;
+        font-family: var(--font-roboto);
+        font-size: var(--font-size-14);
+        width: 150px;
+        background-color: var(--color-theme);
+        color: white;
+        text-align: center;
+        border-radius: 4px;
+        padding: 2px 5px;
+        z-index: 4;
+        top: -5px;
+        right: 195%;
+      }
+      
+      .arrivals-menu .tooltiptext::after {
+        content: "";
+        color: var(--color-theme);
+        position: absolute;
+        top: 50%;
+        left: 100%;
+        margin-top: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: transparent transparent transparent #82D8c6;
+      }
+
+      .arrivals-menu li:hover .tooltiptext {
+        visibility: visible;
+      }
+
+    .arrivals-menu li{
+        position: relative;
+        margin-bottom: 10px;
+    }
+
+        .arrivals-menu li a{
+            color: var(--color-gray-0);
+        }
+        .arrivals-menu {
+            color: var(--color-theme)
+        }
+        
+        .arrivals-menu li:hover i{
+            color: var(--color-theme)
+        }
+
+        .arrivals-menu li:hover .outofstock{
+           color: var(--color-product-outofstock)
+        }
+
+        .arrivals-menu li:hover .instock{
+            color: var(--color-product-instock)
+         }
+        .arrivals-menu .instock{
+            color: var(--color-product-instock);
+        }
+        .arrivals-menu .outofstock{
+            color: var(--color-product-outofstock);
+        }
+
+            .arrivals-menu li:last-child{
+                margin-bottom: 0px;
+            }
 
         #arrivals-1{
             grid-column: 1 / 2;
@@ -413,5 +575,139 @@ body {
             grid-column: 3 / 3;
             grid-row: 1 / 2;
         }
+
+
+.banner{
+    display: flex;  
+    justify-content: space-evenly;
+    height: 418px;
+    background-color: var(--color-gray-1);
+    width: 100%;
+}
+
+    .new-customer{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        width: 255px;
+        background-color: var(--color-theme);
+    }
+
+    .banner .new-customer h1, .countdown-titles h1{
+        font-family: var(--font-play);
+        font-size: var(--font-size-60);
+        font-weight: 700;
+        color: white;
+        text-align: center;
+        margin: 10px 10px;
+    }
+
+    .countdown-titles h1{
+        font-size: 68px;
+        line-height: 64px;
+        margin: 20px;
+    }
+        .banner h1 .h1span{
+            font-family: var(--font-play);
+            font-size:var(--font-size-36);
+            color: white;
+        }
+
+    .banner .new-customer span, .countdown-titles span{
+        font-family: var(--font-roboto);
+        font-size:var(--font-size-16);
+        color: white;
+        text-align: center;
+    }
+
+    .banner .new-customer a{
+        font-family: var(--font-roboto);
+        text-transform: uppercase;
+        font-weight: 500;
+        text-decoration: none;
+        width: 130px;
+        font-size: var(--font-size-18);
+        color: white;
+        background-color: var(--color-theme-dark);
+        border-radius: 50px;
+        margin-top: 2.5em;
+        padding: 10px 10px;
+        text-align: center;
+    }
+    .banner .learn-more{
+        display: flex;
+        flex-direction: column;
+        width: 445px;
+    }
+
+    .banner .learn-more span{
+        font-family: var(--font-roboto);
+        font-size:var(--font-size-14);
+        color: white;
+        font-weight: 400;
+        margin-top: 110px;
+    }
+
+    .second{
+        height: 265px;
+        font-size: var(--font-size-24);
+    }
+
+    .two{
+        background-color: #0E153D;
+        opacity: 85%;
+    }
+
+    .countdown{
+        display: flex;
+        align-items: center;
+    }
+
+    .countdown .counter{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: white;
+        border: dotted 3px var(--color-theme);
+        border-radius: 50%;
+        margin-left: 30px;
+        width: 109px;
+        height: 109px;
+    }
+
+    .countdown-titles {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        align-content: center;
+        width: 255px;
+        height: 265px;
+        background-color: var(--color-theme);
+    }
+
+    
+    
+        .countdown .counter h4{
+            font-family: var(--font-play);
+            font-size: var(--font-size-36);
+            color: var(--color-theme);
+            font-weight: 700;
+            margin-top: 10px;
+        }
+
+        .countdown .counter p{
+            font-family: var(--font-roboto);
+            font-size: var(--font-size-16);
+            color: var(--color-theme-dark);
+            font-weight: 400;
+            margin: -7px;
+        }
+
+            
+        
+
 
 
