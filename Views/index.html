@@ -11,10 +11,19 @@
 </head>
 <body>
         <nav class="top">
+
             <ul class="sec-1">
-                    <li>ENG&nbsp;<i class="fa-solid fa-caret-down"></i></li>
-                    <li>EUR&nbsp;<i class="fa-solid fa-caret-down"></i></li>
+                    <li class="nav">ENG<i class="fa-solid fa-caret-down"></i></li>
+                    <ul class="drop-down">
+                        <li class="dp-item"><a href="javascript:document.getElementById('logoutForm').submit()"><i class="fas fa-sign-out-alt"></i> LOGGA UT</a>
+                        <li class="dp-item"><a href="@Url.Action("s", "manage")"><i class="fas fa-paper-plane"></i> Mina Offerter</a></li>
+                        <li class="dp-item"><a href="@Url.Action("contact", "home")"><i class="fas fa-edit"></i> Skicka en Offert</a></li>
+                    </ul>
             </ul>
+
+
+
+
             <ul class="sec-2">
                 <a href="#">Newsletter</a>
                 <a href="#">Contact Us</a>
@@ -30,12 +39,11 @@
             <section class="sec-3">
                 <img src="z-kentaka-logo.svg" alt="kentaka logo">
             </section>
-            <section class="sec-1">
-                <input id="nav-search" type="search" placeholder="Search products...">
-                <div class="btn">
-					<i class="fas fa-search"></i>
-				</div>
-            </section>
+            <div class="sec-1">
+                <input type="text" placeholder="Search products...">
+                <button class="nav-button" type="submit" value="Subscribe"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+
             <ul class="sec-2">
                 <li><i class="fa-solid fa-user"></i> My Account</li>
                 <li><i class="fa-solid fa-heart"></i></li>
@@ -46,16 +54,16 @@
         </menu>
         <menu class="bottom">
             <ul class="sec-1">
-                <li><i class="fa-solid fa-bars"></i>&nbsp;Browse Categories&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-caret-down"></i></li>
+                <li><i class="fa-solid fa-bars"></i>Browse Categories<i class="fa-solid fa-caret-down"></i></li>
             </ul>
             <ul class="sec-2">
-                <li>Special offer</li>
+                <li><a class="bottom-link" href="#">Special offer</a></li>
             </ul>
         </menu>
 
 
 
-        <div class="container">
+    <div class="container">
             <div class="text-container">
                 <h1 class="hero-text">Shopping is <strong>MORE FUN</strong></h1>
                 <span>
@@ -63,8 +71,10 @@
                 </span>
                 <a class="btn" href="#">shop now</a>
             </div>
-                <img src="z-model.svg">
-        </div>
+            <img src="z-model.svg">
+    </div>
+
+
 
 
 
@@ -109,100 +119,102 @@
             </div>
         </div>
 
-            <div class="grid-items">
-                <div id="men"        class="grid-item"><div class="grid-item-text">Men<span>0 Products</span></div></div>
-                <div id="woman"      class="grid-item"><div class="grid-item-text">Women<span>1111 Products</span></div></div>
-                <div id="kids"       class="grid-item"><div class="grid-item-text">Kids<span>2323 Products</span></div></div>
-                <div id="shoes"      class="grid-item"><div class="grid-item-text">Shoes<span>3333 Products</span></div></div>
-                <div id="hats"       class="grid-item"><div class="grid-item-text">Hats<span>69 Products</span></div></div>
-                <div id="sunglasses" class="grid-item"><div class="grid-item-text">Sunglasses<span>1 Products</span></div></div>
-                <div id="watches"    class="grid-item"><div class="grid-item-text">Watches<span>69 Products</span></div></div>
-            </div>
-
-            <div class="cat">
-                <div class="cat-text">
-                    <h2>NEW <strong class="mark">ARRIVALS</strong></h2>
-                    <img src="z-devider.svg" alt="devider">
-                    <h3>Check out our latest products from top fashion designers</h3>
-                </div>
-            </div>
-
-
-        <div class="arrivals-grid">
-            <div class="arrivals-grid-item">
-            <ul class="arrivals-menu">
-                <li><i class="fa-solid fa-circle instock"></i>
-                    <span class="tooltiptext">In stock</span></li>
-                <li><a href="#"><i class="fa-solid fa-heart"></i></a>
-                    <span class="tooltiptext">Add to Favorites</span></li>
-                <li><a href="#"><i class="fa-solid fa-shuffle"></i></a>
-                    <span class="tooltiptext">Compare Item</span></li>
-                <li><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
-                    <span class="tooltiptext">Show Item</span></li>
-                <li><a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
-                    <span class="tooltiptext">Add to cart</span></li>
-            </ul>
-                <div class="arrivals-background">
-                    <div class="arrivals-title">Blue silk flare sleeved top</div>
-                    <div class="arrivals-info">
-                        <h3>New look men's coat</h3>
-                        <h4>Fashion</h4>
-                        <p class="arrivlas-price-1">€1</p>
-                        <p class="arrivlas-price-2">€420</p>
-                    </div>
-                </div>
-                <img class="img-big" src="z-arrivals-right.svg" alt="man model">
+        <div class="grid-items">
+            <a href="#" id="men"        class="grid-item"><div class="grid-item-text">Men<span>0 Products</span></div></a>
+            <a href="#" id="woman"      class="grid-item"><div class="grid-item-text">Women<span>1111 Products</span></div></a>
+            <a href="#" id="kids"       class="grid-item"><div class="grid-item-text">Kids<span>2323 Products</span></div></a>
+            <a href="#" id="shoes"      class="grid-item"><div class="grid-item-text">Shoes<span>3333 Products</span></div></a>
+            <a href="#" id="hats"       class="grid-item"><div class="grid-item-text">Hats<span>69 Products</span></div></a>
+            <a href="#" id="sunglasses" class="grid-item"><div class="grid-item-text">Sunglasses<span>1 Products</span></div></a>
+            <a href="#" id="watches"    class="grid-item"><div class="grid-item-text">Watches<span>69 Products</span></div></a>
         </div>
 
-            <div class="arrivals-grid-item">
-                <ul class="arrivals-menu">
-                    <li><i class="fa-solid fa-circle outofstock"></i>
-                        <span class="tooltiptext">Out of stock!</span></li></li>
-                    <li><a href="#"><i class="fa-solid fa-heart"></i></a>
-                        <span class="tooltiptext">Add to Favorites</span></li>
-                    <li><a href="#"><i class="fa-solid fa-shuffle"></i></a>
-                        <span class="tooltiptext">Compare Item</span></li>
-                    <li><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
-                        <span class="tooltiptext">Show Item</span></li>
-                    <li><a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
-                        <span class="tooltiptext">Add to cart</span></li>
-                </ul>
-                <div class="arrivals-background">
-                    <div class="arrivals-title">Blue silk flare sleeved top</div>
-                    <div class="arrivals-info">
-                        <h3>New look men's coat</h3>
-                        <h4>Fashion</h4>
-                        <p class="arrivlas-price-1">€50.00</p>
-                        <p class="arrivlas-price-2">€20.00</p>
-                    </div>
-                </div>
-                <img src="z-arrivals-middle.svg" alt="man model">
-            </div>
-            <div class="arrivals-grid-item">
-                <ul class="arrivals-menu">
-                    <li><i class="fa-solid fa-circle instock"></i>
-                        <span class="tooltiptext">In stock</span></li>
-                    <li><a href="#"><i class="fa-solid fa-heart"></i></a>
-                        <span class="tooltiptext">Add to Favorites</span></li>
-                    <li><a href="#"><i class="fa-solid fa-shuffle"></i></a>
-                        <span class="tooltiptext">Compare Item</span></li>
-                    <li><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
-                        <span class="tooltiptext">Quick view</span></li>
-                    <li><a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
-                        <span class="tooltiptext">Add to cart</span></li>
-                </ul>
-                <div class="arrivals-background">
-                    <div class="arrivals-title">Circle pattern girls shirt</div>
-                    <div class="arrivals-info">
-                        <h3>New look men's coat</h3>
-                        <h4>Fashion</h4>
-                        <p class="arrivlas-price-1">€234.3434</p>
-                        <p class="arrivlas-price-2">€99.00</p>
-                    </div>
-                </div>
-                <img class="img-big" src="z-arrivals-left.svg" alt="woman model">
+        
+
+        <div class="cat">
+            <div class="cat-text">
+                <h2>NEW <strong class="mark">ARRIVALS</strong></h2>
+                <img src="z-devider.svg" alt="devider">
+                <h3>Check out our latest products from top fashion designers</h3>
             </div>
         </div>
+
+
+    <div class="arrivals-grid">
+        <div class="arrivals-grid-item">
+        <ul class="arrivals-menu">
+            <li><i class="fa-solid fa-circle instock"></i>
+                <span class="tooltiptext">In stock</span></li>
+            <li><a href="#"><i class="fa-solid fa-heart"></i></a>
+                <span class="tooltiptext">Add to Favorites</span></li>
+            <li><a href="#"><i class="fa-solid fa-shuffle"></i></a>
+                <span class="tooltiptext">Compare Item</span></li>
+            <li><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+                <span class="tooltiptext">Show Item</span></li>
+            <li><a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                <span class="tooltiptext">Add to cart</span></li>
+        </ul>
+            <div class="arrivals-background">
+                <div class="arrivals-title">Blue silk flare sleeved top</div>
+                <div class="arrivals-info">
+                    <h3>New look men's coat</h3>
+                    <h4>Fashion</h4>
+                    <p class="arrivlas-price-1">€1</p>
+                    <p class="arrivlas-price-2">€420</p>
+                </div>
+            </div>
+            <img class="img-big" src="z-arrivals-right.svg" alt="man model">
+    </div>
+
+    <div class="arrivals-grid-item">
+        <ul class="arrivals-menu">
+            <li><i class="fa-solid fa-circle outofstock"></i>
+                <span class="tooltiptext">Out of stock!</span></li></li>
+            <li><a href="#"><i class="fa-solid fa-heart"></i></a>
+                <span class="tooltiptext">Add to Favorites</span></li>
+            <li><a href="#"><i class="fa-solid fa-shuffle"></i></a>
+                <span class="tooltiptext">Compare Item</span></li>
+            <li><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+                <span class="tooltiptext">Show Item</span></li>
+            <li><a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                <span class="tooltiptext">Add to cart</span></li>
+        </ul>
+        <div class="arrivals-background">
+            <div class="arrivals-title">Blue silk flare sleeved top</div>
+            <div class="arrivals-info">
+                <h3>New look men's coat</h3>
+                <h4>Fashion</h4>
+                <p class="arrivlas-price-1">€50.00</p>
+                <p class="arrivlas-price-2">€20.00</p>
+            </div>
+        </div>
+        <img src="z-arrivals-middle.svg" alt="man model">
+    </div>
+    <div class="arrivals-grid-item">
+        <ul class="arrivals-menu">
+            <li><i class="fa-solid fa-circle instock"></i>
+                <span class="tooltiptext">In stock</span></li>
+            <li><a href="#"><i class="fa-solid fa-heart"></i></a>
+                <span class="tooltiptext">Add to Favorites</span></li>
+            <li><a href="#"><i class="fa-solid fa-shuffle"></i></a>
+                <span class="tooltiptext">Compare Item</span></li>
+            <li><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+                <span class="tooltiptext">Quick view</span></li>
+            <li><a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                <span class="tooltiptext">Add to cart</span></li>
+        </ul>
+        <div class="arrivals-background">
+            <div class="arrivals-title">Circle pattern girls shirt</div>
+            <div class="arrivals-info">
+                <h3>New look men's coat</h3>
+                <h4>Fashion</h4>
+                <p class="arrivlas-price-1">€234.3434</p>
+                <p class="arrivlas-price-2">€99.00</p>
+            </div>
+        </div>
+        <img class="img-big" src="z-arrivals-left.svg" alt="woman model">
+    </div>
+</div>
 
         
 <div class="banner one">
@@ -211,7 +223,7 @@
         <span>
             For new customer
         </span>
-        <a class="btn" href="#">SHOP NOW</a>
+        <a class="btn-dark" href="#">SHOP NOW</a>
     </div>
 
     <div class="learn-more">
@@ -286,7 +298,7 @@
                 <p class="arrivlas-price-2">€20.00</p>
             </div>
         </div>
-        <img src="z-featured-model-2.svg" alt="man model">
+        <img src="top-sellers-model1.svg" alt="man model">
     </div>
     <div class="arrivals-grid-item">
         <ul class="arrivals-menu">
@@ -338,8 +350,9 @@
             <h4>12</h4>
             <p>Seconds</p>
         </div>
+        <a class="btn-banner" href="#">SHOP NOW</a>
     </div>
-    <a class="btn" href="#">SHOP NOW</a>
+
 </div>
 
 <div class="cat">
@@ -347,6 +360,124 @@
         <h2>TOP   <strong class="mark">SELLERS</strong></h2>
         <img src="z-devider.svg" alt="devider">
         <h3>Check out our weekly top sellers in all category</h3>
+    </div>
+</div>
+
+
+
+<div class="arrivals-grid-top-sellers">
+    <div id="arrivals-grid-top-sellers1" class="arrivals-grid-item">
+    <ul class="arrivals-menu">
+        <li><i class="fa-solid fa-circle instock"></i>
+            <span class="tooltiptext">In stock</span></li>
+        <li><a href="#"><i class="fa-solid fa-heart"></i></a>
+            <span class="tooltiptext">Add to Favorites</span></li>
+        <li><a href="#"><i class="fa-solid fa-shuffle"></i></a>
+            <span class="tooltiptext">Compare Item</span></li>
+        <li><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+            <span class="tooltiptext">Show Item</span></li>
+        <li><a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+            <span class="tooltiptext">Add to cart</span></li>
+    </ul>
+    <ul class="arrivals-rank-sellers">
+        <li><i class="fa-solid fa-star"></i></li>
+        <li><i class="fa-solid fa-star"></i></li>
+        <li><i class="fa-solid fa-star"></i></li>
+        <li><i class="fa-solid fa-star"></i></li>
+        <li><i class="fa-solid fa-star"></i></li>
+    </ul>
+        <div class="arrivals-background">
+            <div class="arrivals-title">Blue silk flare sleeved top</div>
+            <div class="arrivals-info-sellers">
+                <h3>New look men's coat</h3>
+                <h4>Fashion</h4>
+                <p class="arrivlas-price-1">€1</p>
+                <p class="arrivlas-price-2">€420</p>
+            </div>
+        </div>
+        <img src="top-sellers-model1.svg" alt="man model">
+    </div>
+
+    <div id="arrivals-grid-top-sellers2" class="arrivals-grid-item">
+        <ul class="arrivals-menu">
+            <li><i class="fa-solid fa-circle outofstock"></i>
+                <span class="tooltiptext">Out of stock!</span></li></li>
+            <li><a href="#"><i class="fa-solid fa-heart"></i></a>
+                <span class="tooltiptext">Add to Favorites</span></li>
+            <li><a href="#"><i class="fa-solid fa-shuffle"></i></a>
+                <span class="tooltiptext">Compare Item</span></li>
+            <li><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+                <span class="tooltiptext">Show Item</span></li>
+            <li><a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                <span class="tooltiptext">Add to cart</span></li>
+        </ul>
+        <ul class="arrivals-rank-sellers">
+            <li><i class="fa-solid fa-star"></i></li>
+            <li><i class="fa-solid fa-star"></i></li>
+            <li><i class="fa-solid fa-star"></i></li>
+            <li><i class="fa-solid fa-star"></i></li>
+            <li><i class="fa-regular fa-star"></i></li>
+        </ul>
+        <div class="arrivals-background">
+            <div class="arrivals-title">Blue silk flare sleeved top</div>
+            <div class="arrivals-info-sellers">
+                <h3>New look men's coat</h3>
+                <h4>Fashion</h4>
+                <p class="arrivlas-price-1">€50.00</p>
+                <p class="arrivlas-price-2">€20.00</p>
+            </div>
+        </div>
+        <img src="top-sellers-model2.svg" alt="man model">
+    </div>
+    <div id="arrivals-grid-top-sellers3" class="arrivals-grid-item">
+        <ul class="arrivals-menu">
+            <li><i class="fa-solid fa-circle instock"></i>
+                <span class="tooltiptext">In stock</span></li>
+            <li><a href="#"><i class="fa-solid fa-heart"></i></a>
+                <span class="tooltiptext">Add to Favorites</span></li>
+            <li><a href="#"><i class="fa-solid fa-shuffle"></i></a>
+                <span class="tooltiptext">Compare Item</span></li>
+            <li><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+                <span class="tooltiptext">Quick view</span></li>
+            <li><a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                <span class="tooltiptext">Add to cart</span></li>
+        </ul>
+        <ul class="arrivals-rank-sellers">
+            <li><i class="fa-solid fa-star"></i></li>
+            <li><i class="fa-solid fa-star"></i></li>
+            <li><i class="fa-regular fa-star"></i></li>
+            <li><i class="fa-regular fa-star"></i></li>
+            <li><i class="fa-regular fa-star"></i></li>
+        </ul>
+        <div class="arrivals-background">
+            <div class="arrivals-title">Circle pattern girls shirt</div>
+            <div class="arrivals-info-sellers">
+                <h3>New look men's coat</h3>
+                <h4>Fashion</h4>
+                <p class="arrivlas-price-1">€234.3434</p>
+                <p class="arrivlas-price-2">€99.00</p>
+            </div>
+        </div>
+        <img class="img-big" src="top-sellers-model3.svg" alt="woman model">
+    </div>
+</div>
+
+<div class="footer">
+    <div class="section1">
+        <h3>Subscribe <span>Now</span></h3>
+        <span>Signup for awesome news about our new products and
+            know our special discounts on products.</span>
+        <div class="email">
+            <input type="text" placeholder="Enter email address">
+            <button type="submit" value="Subscribe">Subscribe</button>
+        </div>
+    </div>
+    <div class="section2"></div>
+</div>
+
+<div class="footer-bottom">
+    <div class="footer-bottom-title">
+        <span>&#xA9; Copyright 2022 Kenkata</span>
     </div>
 </div>
 
