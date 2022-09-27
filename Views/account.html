@@ -73,7 +73,7 @@
     <div class="container">
         <menu class="meny-body-bottom">
             <ul class="sec-1">
-                <li class="nav"><i class="fa-solid fa-bars"></i>Browse Categories<i class="fa-solid fa-caret-down"></i>
+                <li class="nav"><i class="fa-solid fa-bars"></i>Browse Categories<i class="fa-solid fa-chevron-down"></i>
                     <ul class="drop-down">
                         <li class="dp-item"><a href="#">Shoes</a></li>
                         <li class="dp-item"><a href="#">Hats</a></li>
@@ -108,58 +108,51 @@
 
 
 
-<div class="signup-signin form-theme">
+<div class="account-grid form-theme">
     <div class="container">
         <div class="card">
-            <div class="card-body">
+            <form id="login-form">
                 <h2>LOGIN</h2>
-                <form id="login-form">
-                    <label for="name">Email Address</label>
-                    <input type="text" name="uname" id="name">
-                    <label for="password">Password</label>
-                    <input type="password" name="pword" id="password">
-                    <button type="submit">LOG IN</button>
-                    <input type="checkbox" class="register" href="#">Remember Me</a>
-                    <a class="register" href="#">Lost Your Password?</a>
-                    <hr>
-                    <h6>or login with</h6>
-                    <div class="api-auth">
-                        <a href="#" class="fb">
-                            Facebook 
-                            <img src="z-login-facebook.svg">
-                        </a>
-        
-                        <a href="#" class="google">
-                            Google
-                            <img src="z-login-google.svg"> 
-                        </a>
+                <label for="name">Email Address<span class="required">*</span></label>
+                <input type="text" name="uname" id="name">
+                <label for="password">Password<span class="required">*</span></label>
+                <input type="password" name="pword" id="password">
+                <button type="submit">LOG IN</button>
+
+                <div class="login-content">
+                    <div class="remember-content">
+                        <input class="remember-me-checkbox" type="checkbox" id="remember">
+                        <label for="remember">Remember me?</label>
                     </div>
-                </form>
-            </div>
-            <div class="card-body">
-                <h2>LOGIN</h2>
-                <form id="login-form">
-                    <label for="name">Email Address</label>
-                    <input type="text" name="uname" id="name">
-                    <label for="password">Password</label>
-                    <input type="password" name="pword" id="password">
-                    <button type="submit">LOG IN</button>
-                    <input type="checkbox" class="register" href="#">Remember Me</a>
-                    <a class="register" href="#">Lost Your Password?</a>
-                    <hr>
-                    <h6>or login with</h6>
-                    <div class="api-auth">
-                        <a href="#" class="fb">
-                            Facebook 
-                            <img src="z-login-facebook.svg">
-                        </a>
-                        <a href="#" class="google">
-                            Google
-                            <img src="z-login-google.svg"> 
-                        </a>
+                    <div class="lost-password">
+                        <a href="#">Lost your password?</a>
                     </div>
-                </form>
-            </div>
+                </div>
+                <div class="divider"><hr><h6>or login with</h6></div>
+                <div class="external-logins">
+                    <a href="#" class="external-login-button"><img src="z-login-facebook.svg">Facebook</a>
+                    <a href="#" class="external-login-button"><img src="z-login-google.svg">Google </a>
+                </div> 
+            </form>
+        </div>
+        <div class="card">
+            <form id="login-form">
+                <h2>REGISTER</h2>
+                <p class="info-text">Registering for this site allows you to access your order status and history. Just fill in the fields below, and we’ll get a new account set up for you in no time. We will only ask you for information necessary to make the purchase process faster and easier.</p>
+                <label for="Firstname1">Firstname<span class="required">*</span></label>
+                <input type="text" name="Firstname1" id="Firstname1">
+
+                <label for="Lastname1">Lastname<span class="required">*</span></label>
+                <input type="Lastname" name="Lastname1" id="Lastname1">
+                
+                <label for="uname1">Email Address<span class="required">*</span></label>
+                <input type="text" name="uname1" id="uname1">
+
+                <label for="password1">Password<span class="required">*</span></label>
+                <input type="password1" name="pword" id="password1">
+                <p class="info-text-tos">Your personal data will be used to support your experience throughout this website, to manage access to your account, and for other purposes described in our <a href="#">privacy policy.</a></p>
+                <button type="submit">REGISTER</button>
+            </form>
         </div>
     </div>
 </div>

@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&family=Roboto:wght@400;500&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
 :root{
     --color-theme: #20D3C2;
     --color-theme-light: #EDFCFA;
@@ -10,11 +10,13 @@
     --color-gray-1: #CCCCCC;
     --color-gray-3: #EEEEEE;
     --color-gray-4: #F6F6F6;
+    --color-gray-5: #777777;
     --color-product-instock: #82D8c6;
     --color-product-outofstock: #FE6C6C;
     
     --font-play: 'Play', sans-serif;
     --font-roboto: 'Roboto', sans-serif;
+    --font-montserrat: 'Montserrat', sans-serif;
     
     --font-size-14: 19px;
     --font-size-16: 21px;
@@ -77,17 +79,178 @@ body {
             transform: translateY(-2px)
         }
   
-.signup-signin{
-    margin-top: 3rem;
+
+.account-grid .container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-top: 120px;
+    margin-bottom: 120px;
 }
 
-  .card{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-  }
+.card{
+    border: none;
+}
 
-  .card-body{
-    display: flex;
-  }
-  
+    .card #login-form {
+        padding: 2rem;
+        background-color: var(--color-gray-4);
+        border-radius: 5px;
+    }
+
+    .card #login-form label .required {
+        font-family: var(--font-roboto);
+        font-size: var(--font-size-16);
+        color: var(--color-theme )
+    }
+
+    .card #login-form .info-text-tos a:hover{
+        color:var(--color-theme-dark);
+    }
+
+    .card #login-form button:hover{
+        background-color: var(--color-theme-dark);
+        color: var(--color-theme);
+    }
+
+
+    .card h2 {
+        font-family: var(--font-roboto);
+        font-size: var(--font-size-24);
+        color: var(--color-theme-dark);
+    }
+
+    .card label{
+        font-family: var(--font-roboto);
+        font-size: var(--font-size-16);
+        color: var(--color-theme-dark)
+    }
+
+    .card input{
+        display: flex;
+        width: 100%;
+        padding: .5rem;
+        border-radius: 5px;
+        border: none;
+        margin-bottom: 1rem;
+    }
+
+
+    .card #login-form button{
+        padding: .8rem;
+        width: 100%;
+        border: none;
+        color: white;
+        background-color: var(--color-theme);
+        border-radius: 50px;
+        font-family: var(--font-roboto);
+        font-weight: 500;
+        font-size: 24px;
+        transition: all .2s;
+    }
+
+    .card #login-form .info-text{
+        font-family: var(--font-roboto);
+        font-size: var(--font-size-14);
+        color: var(--color-gray-5);
+        font-weight: 400;
+        margin-bottom: 2rem;
+    }
+
+    .card #login-form .info-text-tos{
+        font-family: var(--font-roboto);
+        font-size: var(--font-size-16);
+        color: var(--color-theme-dark);
+        font-weight: 400;
+        margin-bottom: 2rem;
+    }
+
+    .card #login-form .info-text-tos a{
+        font-family: var(--font-montserrat);
+        font-size: var(--font-size-14);
+        color:var(--color-theme);
+        text-decoration: none;
+        font-weight: 600;
+        transition: all .2s;
+    }
+
+    .login-content{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 1rem;
+    }
+    .login-content .remember-content{
+        display: flex;
+        align-items: center;
+    }
+
+    .login-content .remember-content label{
+        font-family: var(--font-roboto);
+        font-size: var(--font-size-14);
+        color: var(--color-theme-dark);
+        margin-left: 0.5rem;
+        cursor: pointer;
+    }
+
+    .login-content .lost-password a{
+        font-family: var(--font-roboto);
+        font-size: var(--font-size-14);
+        color: var(--color-theme);
+        cursor: pointer;
+        text-decoration: none;
+    }
+
+        .login-content .lost-password a:hover{
+            text-decoration: underline;
+        }
+
+        .login-content .remember-me-checkbox {
+            width: auto;
+            margin: auto;
+        }
+
+        #login-form .divider{
+            position: relative;
+        }
+
+        .divider h6{
+            position: absolute;
+            top: -10px;
+            padding: 0 30px;
+            left: 50%;
+            text-transform: uppercase;
+            color: var(--color-theme-dark);
+            background-color: var(--color-gray-4);
+            transform: translate(-50%, 0);
+        }
+
+
+.external-logins {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+    .external-logins .external-login-button{
+        position: relative;
+        padding: .5rem;
+        color: white;
+        text-decoration: none;
+        font-family: var(--font-roboto);
+        font-size: 16px;
+        text-align: center;
+        border-radius: 5px;
+        background-color: #3B5998;
+    }
+
+    .external-logins .external-login-button:nth-child(2) {
+        background-color:#4285F4;
+    }
+
+        .external-logins .external-login-button img{
+            position: absolute;
+            left: 10px
+        }
+
+    
