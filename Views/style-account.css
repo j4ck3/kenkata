@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&family=Roboto:wght@400;500&display=swap');
+
+:root{
+    --color-theme: #20D3C2;
+    --color-theme-light: #EDFCFA;
+    --color-theme-dark: #0E153D;
+    --color-dark: #080c24;
+    --color-gray-0: #AAAAAA;
+    --color-gray-1: #CCCCCC;
+    --color-gray-3: #EEEEEE;
+    --color-gray-4: #F6F6F6;
+    --color-product-instock: #82D8c6;
+    --color-product-outofstock: #FE6C6C;
+    
+    --font-play: 'Play', sans-serif;
+    --font-roboto: 'Roboto', sans-serif;
+    
+    --font-size-14: 19px;
+    --font-size-16: 21px;
+    --font-size-24: 32px;
+    --font-size-36: 48px;
+    --font-size-60: 80px;
+    }
+    
+body {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+.navigation-container {
+    display: flex;
+    align-items: center;
+    background-color: #50546E;
+    height: 140px;
+ }
+
+ .navigation-container-body {
+    display: flex;
+    justify-content: space-between;
+ }
+ 
+ .navigation-container .title {
+    font-family: var(--font-roboto);
+    font-size: 29px;
+    color: var(--color-theme);
+    font-weight: 500;
+ }
+
+ .navigation-container .navigation-container-body .breadcrumb {
+    list-style: none;
+  }
+  
+    .navigation-container .breadcrumb li {
+        font-family: var(--font-roboto);
+        font-size: var(--font-size-16);
+        color: white;
+        display: inline;
+        font-size: 18px;
+    }
+    
+        .navigation-container .breadcrumb li+li:before {
+            padding: 8px;
+            color: white;
+            content: "/\00a0";
+        }
+        
+        .navigation-container .breadcrumb .active a {
+            color: var(--color-theme);
+            text-decoration: none;
+            transition: transform 0.15s cubic-bezier(0.22, 0.61, 0.36, 1);
+        }
+        
+        .navigation-container .breadcrumb .active:hover {
+            transform: translateY(-2px)
+        }
+  
+.signup-signin{
+    margin-top: 3rem;
+}
+
+  .card{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .card-body{
+    display: flex;
+  }
+  

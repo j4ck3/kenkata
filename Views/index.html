@@ -7,22 +7,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/acc20ec783.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style-index.css">
+    <link rel="stylesheet" href="style-account.css">
     <title>Kentaka - Home</title>
 </head>
 <body>
         <nav class="top">
-
             <ul class="sec-1">
-                    <li class="nav">ENG<i class="fa-solid fa-caret-down"></i></li>
+                <li class="nav">ENG<i class="fa-solid fa-chevron-down"></i></i>
                     <ul class="drop-down">
-                        <li class="dp-item"><a href="javascript:document.getElementById('logoutForm').submit()"><i class="fas fa-sign-out-alt"></i> LOGGA UT</a>
-                        <li class="dp-item"><a href="@Url.Action("s", "manage")"><i class="fas fa-paper-plane"></i> Mina Offerter</a></li>
-                        <li class="dp-item"><a href="@Url.Action("contact", "home")"><i class="fas fa-edit"></i> Skicka en Offert</a></li>
+                        <li class="dp-item"><a href="#">English</a></li>
+                        <li class="dp-item"><a href="#">Svenska</a></li>
                     </ul>
+                </li>
+
+                <li class="nav">EUR<i class="fa-solid fa-chevron-down"></i></i>
+                    <ul class="drop-down">
+                        <li class="dp-item"><a href="#">EUR</a></li>
+                        <li class="dp-item"><a href="#">SEK</a></li>
+                    </ul>
+                </li>
             </ul>
-
-
-
 
             <ul class="sec-2">
                 <a href="#">Newsletter</a>
@@ -45,11 +49,11 @@
             </div>
 
             <ul class="sec-2">
-                <li><i class="fa-solid fa-user"></i> My Account</li>
-                <li><i class="fa-solid fa-heart"></i></li>
-                <li><i class="fa-solid fa-shuffle"></i><span id="counter-1">0</span></li>
-                <li><i class="fa-solid fa-bag-shopping"></i><span id="counter-2">0</span></li>
-                <li>€0.00</li>
+                <a href="account.html"><i class="fa-regular fa-user"></i> My Account</a>
+                <a href="account.html"><i class="fa-regular fa-heart"></i></a>
+                <a href="account.html"><i class="fa-solid fa-shuffle"></i><span id="counter-1">0</span></a>
+                <a href="account.html"><i class="fa-solid fa-bag-shopping"></i><span id="counter-2">0</span></a>
+                <a href="account.html">€0.00</a>
             </ul>
         </menu>
         <menu class="bottom">
@@ -63,7 +67,7 @@
 
 
 
-    <div class="container">
+    <div class="container-home">
             <div class="text-container">
                 <h1 class="hero-text">Shopping is <strong>MORE FUN</strong></h1>
                 <span>
@@ -218,24 +222,24 @@
 
         
 <div class="banner one">
-    <div class="new-customer">
-        <h1>30% <span class="h1-span">OFF</span></h1>
-        <span>
-            For new customer
-        </span>
-        <a class="btn-dark" href="#">SHOP NOW</a>
-    </div>
-
-    <div class="learn-more">
-        <span>
-            Donec pulvinar arcu vitae ipsum varius cursus. 
-            Nunc iaculis fermentum iaculis. Nunc pulvinar purus at 
-            erat lacinia, ut convallis nibh consequat. 
-            Integer nulla nisi, aliquam at tellus a, 
-            viverra scelerisque purus. Nam pretium iaculis ultrices.
-        </span>
-        <a class="btn" href="#">LEARN MORE</a>
-    </div>
+        <div class="new-customer">
+            <h1>30% <span class="h1-span">OFF</span></h1>
+            <span>
+                For new customer
+            </span>
+            <a class="btn-dark" href="#">SHOP NOW</a>
+        </div>
+    
+        <div class="learn-more">
+            <span>
+                Donec pulvinar arcu vitae ipsum varius cursus. 
+                Nunc iaculis fermentum iaculis. Nunc pulvinar purus at 
+                erat lacinia, ut convallis nibh consequat. 
+                Integer nulla nisi, aliquam at tellus a, 
+                viverra scelerisque purus. Nam pretium iaculis ultrices.
+            </span>
+            <a class="btn" href="#">LEARN MORE</a>
+        </div>
 </div>
 
 <div class="cat">
