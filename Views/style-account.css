@@ -126,6 +126,14 @@ body {
         color: var(--color-theme-dark)
     }
 
+    .card #login-form label:first-of-type{
+        margin-top: 2rem;
+    }
+
+    .card #login-form label:last-of-type{
+        margin-top: 0;
+    }
+
     .card input{
         display: flex;
         width: 100%;
