@@ -161,26 +161,20 @@ strong {background-color: transparent !important; }
             transition: .2s;
         }
 
-        .meny-middle .sec-1, .sec-2{
-            display: flex;
-            position: relative;
-        }
-        .meny-middle .sec-1 {
-            width: 696px;
-            overflow: hidden;
-        }
-
-        .meny-middle .sec-2 a{
+        .meny-middle .sec-2 a, .meny-body-bottom .sec-1 input{
             position: relative;
         } 
-    
+
+        .meny-middle .meny-body-middle .sec-1{
+            max-width: 696px;
+            width: 100%;
+        }
+
         .meny-middle .sec-1 input{
             background-color: white;
             padding: 11px 46px;
             border-radius: 50px;
-            width: 100%;
             border: 1px solid var(--color-gray-1);
-            height: 100%;
             outline: none;
         }
 
@@ -243,28 +237,29 @@ strong {background-color: transparent !important; }
         }
 
 
-    .meny-bottom li {
-        list-style: none;
-        font-family: var(--font-roboto);
-        font-size: var(--font-size-16)px;
-        color: black;
+        
+.meny-bottom .sec-1{
+    background-color: var(--color-theme);
+    padding: 9px 0px;
+    position: relative;
+}
 
-    }
+.meny-bottom li {
+    list-style: none;
+    font-family: var(--font-roboto);
+    font-size: var(--font-size-16)px;
+    color: black;
 
-    .meny-bottom .sec-1{
-        background-color: var(--color-theme);
-        padding: 9px 0px;
-        position: relative;
-    }
+}
 
-    .meny-bottom .sec-1 .nav{
-        display: flex;
-        align-items: center;
-    }
+.meny-bottom .sec-1 .nav{
+    display: flex;
+    align-items: center;
+}
 
-    .meny-bottom .sec-1 .nav{
-        color: white;
-    }
+.meny-bottom .sec-1 .nav{
+    color: white;
+}
 
     .meny-bottom .sec-1 li i:first-child{
         margin: 0px 10px;
@@ -305,7 +300,6 @@ strong {background-color: transparent !important; }
             padding: 0px;
             opacity: 0;
             width: 100%;
-            z-index: 1;
         }
 
             .meny-body-bottom .sec-1 .nav .drop-down .dp-item a{
@@ -365,15 +359,15 @@ strong {background-color: transparent !important; }
         flex-basis: 35%;
     }
 
-    .text-container span{
-        font-family: var(--font-roboto);
-        font-size: var(--font-size-16);
-        color:var(--color-theme-dark);
-    }
+        .text-container span{
+            font-family: var(--font-roboto);
+            font-size: var(--font-size-16);
+            color:var(--color-theme-dark);
+        }
 
-    .container-home img{
-        max-height: 600px;
-    }
+        .container-home img{
+            max-height: 600px;
+        }
 
 
 .info-boxes{
@@ -654,7 +648,7 @@ strong {background-color: transparent !important; }
             text-align: center;
             border-radius: 4px;
             padding: 2px 5px;
-            z-index: 4;
+            z-index: 3;
             top: -5px;
             right: 195%;
         }
@@ -848,8 +842,6 @@ strong {background-color: transparent !important; }
         height: 109px;
     }
 
-
-
     .container-two-dark .btn-banner{
         font-family: var(--font-roboto);
         text-transform: uppercase;
@@ -1002,6 +994,7 @@ strong {background-color: transparent !important; }
 
     
 @media (max-width: 1250px){
+
     .grid-items {
         display: grid;
         grid-template-columns: 380px;
@@ -1041,8 +1034,17 @@ strong {background-color: transparent !important; }
 #arrivals-grid-top-sellers3 { grid-area: 3 / 1 / 4 / 2; }
 }
 
-
 @media (max-width:1024px){
+.meny-middle .meny-body-middle .sec-1{
+    max-width: none;
+    width: auto;
+}
+
+.meny-middle .sec-3 img {
+    display: none;
+}
+
+
 .text-container{
     text-align: center;
 }
@@ -1116,6 +1118,28 @@ strong {background-color: transparent !important; }
     }
 }
 
+
+
+
+@media (max-width: 720px){
+    .meny-middle .meny-body-middle .sec-1{
+        max-width: none;
+        width: auto;
+    }
+
+    .meny-body-top .sec-2 #socials {
+        display: none;
+    }
+
+    .meny-body-top .sec-2 a {
+        margin-right:5px;
+    }
+
+    .meny-body-top .sec-1 .nav {
+        margin: 0 5px;
+    }
+    
+}
 
 @media (max-width: 480px){
     .cat-text{
