@@ -166,32 +166,33 @@ body {
         margin-bottom: 2rem;
     }
 
-    .card #login-form .info-text-tos{
-        font-family: var(--font-roboto);
-        font-size: var(--font-size-16);
-        color: var(--color-theme-dark);
-        font-weight: 400;
-        margin-bottom: 2rem;
-    }
+        .card #login-form .info-text-tos{
+            font-family: var(--font-roboto);
+            font-size: var(--font-size-16);
+            color: var(--color-theme-dark);
+            font-weight: 400;
+            margin-bottom: 2rem;
+        }
 
-    .card #login-form .info-text-tos a{
-        font-family: var(--font-montserrat);
-        font-size: var(--font-size-14);
-        color:var(--color-theme);
-        text-decoration: none;
-        font-weight: 600;
-        transition: all .2s;
-    }
+        .card #login-form .info-text-tos a{
+            font-family: var(--font-montserrat);
+            font-size: var(--font-size-14);
+            color:var(--color-theme);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all .2s;
+        }
 
-    .login-content{
-        display: flex;
-        justify-content: space-between;
-        margin-top: 1rem;
-    }
-    .login-content .remember-content{
-        display: flex;
-        align-items: center;
-    }
+.login-content{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+.login-content .remember-content{
+    display: flex;
+    align-items: center;
+}
 
     .login-content .remember-content label{
         font-family: var(--font-roboto);
@@ -218,20 +219,20 @@ body {
             margin: auto;
         }
 
-        #login-form .divider{
-            position: relative;
-        }
+            #login-form .divider{
+                position: relative;
+            }
 
-        .divider h6{
-            position: absolute;
-            top: -10px;
-            padding: 0 30px;
-            left: 50%;
-            text-transform: uppercase;
-            color: var(--color-theme-dark);
-            background-color: var(--color-gray-4);
-            transform: translate(-50%, 0);
-        }
+            .divider h6{
+                position: absolute;
+                top: -10px;
+                padding: 0 30px;
+                left: 50%;
+                text-transform: uppercase;
+                color: var(--color-theme-dark);
+                background-color: var(--color-gray-4);
+                transform: translate(-50%, 0);
+            }
 
 
 .external-logins {
@@ -254,9 +255,9 @@ body {
         transition: all .2s;
     }
 
-    .external-logins .external-login-button:nth-child(2) {
-        background-color:#4285F4;
-    }
+        .external-logins .external-login-button:nth-child(2) {
+            background-color:#4285F4;
+        }
 
         .external-logins .external-login-button:hover{
             color: var(--color-theme-dark);
@@ -272,25 +273,10 @@ body {
             left: 10px
         }
 
-
-@media (max-width: 1250px){
-
-}
-
-
 @media (max-width:1024px){
     .account-grid .container {
         display: grid;
         grid-template-columns:1fr;
         gap: 1rem;
-        margin: 5rem 1rem;
     }
 }
-
-
-@media (max-width: 480px){
-
-}
-        
-
-    

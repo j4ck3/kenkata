@@ -1,5 +1,10 @@
 <!DOCTYPE html>
 <html lang="sv">
+<!-- OBS:   När man gör sidan mindre genom enhetsemuleringsläget i f12 så blir det ett konstigt space på höger sida 
+            ibland som jag inte lyckas fixa. Det händer heller inte alltid tiden men 
+            oftast och jag vet inte vad det beror på. Har förökt göra sidan så
+            responiv till mobil så gott jag kan även fast det ser väldigt konstigt ut ibland. 
+-->
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,84 +18,78 @@
 </head>
 
 <body>
-<div class="meny">
-    <div class="container">
-        <nav class="meny-body-top">
-            <ul class="sec-1 d-flex">
-                <li class="nav">ENG<i class="fa-solid fa-chevron-down"></i></i>
-                    <ul class="drop-down">
-                        <li class="dp-item"><a href="#">English</a></li>
-                        <li class="dp-item"><a href="#">Svenska</a></li>
-                    </ul>
-                </li>
-        
-                <li class="nav">EUR<i class="fa-solid fa-chevron-down"></i></i>
-                    <ul class="drop-down">
-                        <li class="dp-item"><a href="#">EUR</a></li>
-                        <li class="dp-item"><a href="#">SEK</a></li>
-                    </ul>
-                </li>
-            </ul>
+    <div class="meny">
+        <div class="container">
+            <nav class="meny-body-top">
+                <ul class="sec-1 d-flex">
+                    <li class="nav">ENG<i class="fa-solid fa-chevron-down"></i></i>
+                        <ul class="drop-down">
+                            <li class="dp-item"><a href="#">English</a></li>
+                            <li class="dp-item"><a href="#">Svenska</a></li>
+                        </ul>
+                    </li>
+            
+                    <li class="nav">EUR<i class="fa-solid fa-chevron-down"></i></i>
+                        <ul class="drop-down">
+                            <li class="dp-item"><a href="#">EUR</a></li>
+                            <li class="dp-item"><a href="#">SEK</a></li>
+                        </ul>
+                    </li>
+                </ul>
 
-            <ul class="sec-2">
-                <a href="#">Newsletter</a>
-                <a href="#">Contact Us</a>
-                <a href="#">FAQs</a>
-                <a id="socials" href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                <a id="socials" href="#"><i class="fa-brands fa-twitter"></i></a>
-                <a id="socials" href="#"><i class="fa-brands fa-instagram"></i></a>
-                <a id="socials" href="#"><i class="fa-brands fa-pinterest-p"></i></a>
-                <a id="socials" href="#"><i class="fa-brands fa-youtube"></i></a>
-            </ul>
-        </nav>
+                <ul class="sec-2 d-flex">
+                    <li><a class="meny-top-link" href="#">Newsletter</a></li>
+                    <li><a class="meny-top-link" href="#">Contact Us</a></li>
+                    <li><a class="meny-top-link" href="#">FAQs</a></li>
+                    <li><a class="socials" href="#"><i class="fa-brands fa-pinterest-p"></i></a></li>
+                    <li><a class="socials" href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                    <li><a class="socials" href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                    <li><a class="socials" href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a class="socials" href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                </div>
+            </nav>
+        </div>
     </div>
-</div>
-
-
-<div class="meny-middle">
-    <div class="container">
-        <menu class="meny-body-middle">
-            <section class="sec-3">
-                <img src="content/z-kentaka-logo.svg" alt="kentaka logo">
-            </section>
-            <div class="sec-1">
-                <input type="text" placeholder="Search products...">
-                <button class="nav-button" type="submit" value="Subscribe"><i class="fa-solid fa-magnifying-glass"></i></button>
-            </div>
-        
-            <ul class="sec-2">
-                <a href="account.html"><i class="fa-regular fa-user"></i> My Account</a>
-                <a href="account.html"><i class="fa-regular fa-heart"></i></a>
-                <a href="account.html"><i class="fa-solid fa-shuffle"></i><span id="counter-1">0</span></a>
-                <a href="account.html"><i class="fa-solid fa-bag-shopping"></i><span id="counter-2">0</span></a>
-                <a href="account.html">€1337.69</a>
-            </ul>
-        </menu>
+    <div class="meny-middle">
+        <div class="container">
+            <menu class="meny-body-middle">
+                <section class="sec-3">
+                    <img src="content/z-kentaka-logo.svg" alt="kentaka logo">
+                </section>
+                <div class="sec-1 position-relative">
+                    <input type="text" placeholder="Search products...">
+                    <button class="nav-button" type="submit" value="Subscribe"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+                <ul class="sec-2 d-flex position-relative">
+                    <li><a href="account.html"><i class="fa-regular fa-user"></i><span id="meny-middle-account"> My Account</span></a></li>
+                    <li><a href="account.html"><i class="fa-regular fa-heart"></i></a></li>
+                    <li><a href="account.html"><i class="fa-solid fa-shuffle"></i><span id="counter-1">0</span></a></li>
+                    <li><a href="account.html"><i class="fa-solid fa-bag-shopping"></i><span id="counter-2">+99</span></a></li>
+                    <li><a href="account.html">€999.99</a></li>
+                </ul>
+            </menu>
+        </div>
     </div>
-</div>
-
-<div class="meny-bottom">
-    <div class="container">
-        <menu class="meny-body-bottom">
-            <ul class="sec-1">
-                <li class="nav"><i class="fa-solid fa-bars"></i>Browse Categories<i class="fa-solid fa-chevron-down"></i>
-                    <ul class="drop-down">
-                        <li class="dp-item"><a href="#">Shoes</a></li>
-                        <li class="dp-item"><a href="#">Hats</a></li>
-                        <li class="dp-item"><a href="#">Sunglasses</a></li>
-                        <li class="dp-item"><a href="#">Shirts</a></li>
-                    </ul></li>
-            </ul>
-            <ul class="sec-2">
-                <li><a class="bottom-link" href="#">Special offer</a></li>
-            </ul>
-        </menu>
+    <div class="meny-bottom">
+        <div class="container">
+            <menu class="meny-body-bottom">
+                <ul class="sec-1">
+                    <li class="nav"><i class="fa-solid fa-bars"></i>Browse Categories<i class="fa-solid fa-caret-down"></i>
+                        <ul class="drop-down">
+                            <li class="dp-item"><a href="#">Shoes</a></li>
+                            <li class="dp-item"><a href="#">Hats</a></li>
+                            <li class="dp-item"><a href="#">Sunglasses</a></li>
+                            <li class="dp-item"><a href="#">Shirts</a></li>
+                            <li class="dp-item"><a href="#">Watches</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="sec-2">
+                    <li><a class="bottom-link" href="#">Special offer</a></li>
+                </ul>
+            </menu>
+        </div>
     </div>
-</div>
-
-
-
-
 
 <div class="navigation-container">
     <div class="container">
@@ -105,8 +104,6 @@
         </div>
     </div>
 </div>
-
-
 
 <div class="account-grid form-theme">
     <div class="container">
@@ -130,8 +127,8 @@
                 </div>
                 <div class="divider"><hr><h6>or login with</h6></div>
                 <div class="external-logins">
-                    <a href="#" class="external-login-button"><img src="content/z-login-facebook.svg">Facebook</a>
-                    <a href="#" class="external-login-button"><img src="content/z-login-google.svg">Google </a>
+                    <a href="#" class="external-login-button"><img alt="facebook" src="content/z-login-facebook.svg">Facebook</a>
+                    <a href="#" class="external-login-button"><img alt="google" src="content/z-login-google.svg">Google </a>
                 </div> 
             </form>
         </div>
